@@ -14,7 +14,12 @@ export default class App extends Component {
             perPage: 50,
             currentPage: 0,
             sortKey : "code",
-            ascSort : 1
+            ascSort : 1,
+            codeSort : "(ASC)",
+            nameSort : "",
+            citySort : "",
+            countrySort : ""
+
         };
         this.handlePageClick = this
             .handlePageClick
@@ -34,7 +39,7 @@ export default class App extends Component {
               const slice = data.slice(this.state.offset, this.state.offset + this.state.perPage)
               const postData = slice.map(item => <React.Fragment>
                   <tr key={item.code}>
-                    {/* <td>{++this.state.id}</td> */}
+                    <td>{++this.state.id}</td>
                     <td>{item.code?item.code:"###"}</td>
                     <td>{item.name?item.name:"### airport"}</td>
                     <td>{item.city?item.city:"### city"}</td>
@@ -43,9 +48,14 @@ export default class App extends Component {
                 </React.Fragment>)
 
               this.setState({
+                  id: this.state.offset,
                   pageCount: Math.ceil(data.length / this.state.perPage),                  
                   data : res.data,
                   sortKey : sortKey,
+                  codeSort : (sortKey==="code")?(this.state.ascSort?"(ASC)":"(DESC)"):"",
+                  nameSort : (sortKey==="name")?(this.state.ascSort?"(ASC)":"(DESC)"):"",
+                  citySort : (sortKey==="city")?(this.state.ascSort?"(ASC)":"(DESC)"):"",
+                  countrySort : (sortKey==="country")?(this.state.ascSort?"(ASC)":"(DESC)"):"",
                   postData
               })              
             })
@@ -67,18 +77,27 @@ export default class App extends Component {
     componentDidMount() {
         this.receivedData(this.state.sortKey);
     }
+
+    sortBy = (e) => {
+      this.receivedData(e);
+      
+      this.setState({ 
+        ascSort : (e===this.state.sortKey)?(this.state.ascSort?0:1):1
+      });
+    }
     
     render() {
         return (
             <div align="center">
               <h2>JSON into Table With Pagination and Sort</h2>
-              <table align="center" cellPadding='6' cellSpacing='0'>
+              <table align="center" cellPadding='6' cellSpacing='0' border="1">
                 <thead> 
                   <tr>
-                    <td onClick={() => this.receivedData('code')}>Code</td>
-                    <td onClick={() => this.receivedData('name')}>Name</td>
-                    <td onClick={() => this.receivedData('city')}>City</td>
-                    <td onClick={() => this.receivedData('country')}>Country</td>
+                    <td>Sl.No </td>
+                    <td onClick={() => this.sortBy('code')}>Code {this.state.codeSort}</td>
+                    <td onClick={() => this.sortBy('name')}>Name {this.state.nameSort}</td>
+                    <td onClick={() => this.sortBy('city')}>City {this.state.citySort}</td>
+                    <td onClick={() => this.sortBy('country')}>Country {this.state.countrySort}</td>
                   </tr>
                 </thead>
                 <tbody>
