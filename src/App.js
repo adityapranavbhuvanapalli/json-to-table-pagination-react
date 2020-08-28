@@ -11,7 +11,7 @@ export default class App extends Component {
             id : 0,
             offset: 0,
             data: [],
-            perPage: 50,
+            perPage: 13,
             currentPage: 0,
             sortKey : "code",
             ascSort : 1,
