@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/json-to-table-pagination-react/static/css/main.cfac8778.chunk.css",
+    "main.js": "/json-to-table-pagination-react/static/js/main.950105a6.chunk.js",
+    "main.js.map": "/json-to-table-pagination-react/static/js/main.950105a6.chunk.js.map",
+    "runtime-main.js": "/json-to-table-pagination-react/static/js/runtime-main.d2a00391.js",
+    "runtime-main.js.map": "/json-to-table-pagination-react/static/js/runtime-main.d2a00391.js.map",
+    "static/js/2.5fbd220d.chunk.js": "/json-to-table-pagination-react/static/js/2.5fbd220d.chunk.js",
+    "static/js/2.5fbd220d.chunk.js.map": "/json-to-table-pagination-react/static/js/2.5fbd220d.chunk.js.map",
+    "index.html": "/json-to-table-pagination-react/index.html",
+    "precache-manifest.10ae908547f0fa29c55986d65cf11ec1.js": "/json-to-table-pagination-react/precache-manifest.10ae908547f0fa29c55986d65cf11ec1.js",
+    "service-worker.js": "/json-to-table-pagination-react/service-worker.js",
+    "static/css/main.cfac8778.chunk.css.map": "/json-to-table-pagination-react/static/css/main.cfac8778.chunk.css.map",
+    "static/js/2.5fbd220d.chunk.js.LICENSE.txt": "/json-to-table-pagination-react/static/js/2.5fbd220d.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.d2a00391.js",
+    "static/js/2.5fbd220d.chunk.js",
+    "static/css/main.cfac8778.chunk.css",
+    "static/js/main.950105a6.chunk.js"
+  ]
+}
