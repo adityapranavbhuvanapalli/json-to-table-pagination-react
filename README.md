@@ -4,7 +4,7 @@ A react application to display JSON data from an API to a paginated table where 
 ### Steps include
 - Parsing json data from an API.
 - Display the data in Tabular format
-- Apply pagination (display only 13 rows per page).
+- Apply pagination (displays 13 rows per page).
 - Sort in Ascending or Descending order by clicking on the column header.
 
 ### Screenshots
