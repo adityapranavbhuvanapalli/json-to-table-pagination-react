@@ -6,3 +6,6 @@ A react application to display JSON data from an API to a paginated table where 
 - Display the data in Tabular format
 - Apply pagination (display only 13 rows per page).
 - Sort in Ascending or Descending order by clicking on the column header.
+
+### Screenshots
+
