@@ -9,4 +9,4 @@ A react application to display JSON data from an API to a paginated table where 
 
 ### Screenshots
 
-<img src="https://github.com/adityapranavbhuvanapalli/json-to-table-pagination-react/tree/master/screenshots/screenshot.png" width="250">
+<img src="https://github.com/adityapranavbhuvanapalli/json-to-table-pagination-react/tree/master/screenshots/screenshot.png">
